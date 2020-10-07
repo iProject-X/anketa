@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+      
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+   <!-- <link rel="stylesheet" href="{% static 'css/style.css'%}"> -->
+    <link rel="stylesheet" type="txt/css" href="{% static 'css/style.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosh sahifa</title>
+</head>
+<body>
+  
+    {% if user.is_authenticated %}
+      Добро пожаловать: {{ user.first_name }}!
+   
+    {% else %}
+      <p>You are not logged in</p>
+      <a style="color:black"href="{% url 'login' %}">login</a>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %} 
+        {%for field in stimuls%}
+        <p>{{field.stimul}}</p> 
+        <p>{{field.answer}}</p>
+        {%endfor%}
+    <input type="submit" >
+    
+    <p><a href="{% url 'logout' %}">Выход</a></p>
+</form>
+</body>
+
+{% endblock %}
+</html>

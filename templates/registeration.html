@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block content %}
+      
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" type="txt/css" href="{% static 'css/style.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro'yxatdan o'tish</title>
+</head>
+ 
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+          <div class="card card-signin flex-row my-4">
+            <div class="card-img-left d-none d-md-flex embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+               <!-- Background image for card set in CSS! -->
+              </div>
+              <div class="card-body">
+                
+                <form  action="" method="post">
+                  {% csrf_token %}
+             
+            <!--    <p>{{form.username}}</p>
+                <p>{{form.email}}</p>
+                <p>{{form.password1}}</p>
+                <p>{{form.password2}}</p>
+                <p>{{profile_form.fullname}}</p>
+                <p>{{profile_form.age}}</p>
+                <p>{{profile_form.specialite}}</p>
+                <p>{{profile_form.language}}</p>
+                <input type="submit" >
+              </form> -->
+                
+               <h5 class="card-title text-center">Ro'yxatdan O'tish</h5>
+                <form class="form-signin" action="" method="post">
+                  <div class="form-label-group">
+                    <input type="text" id="inputUserame" class="form-control" placeholder="F.I.O." required autofocus {{form.first_name}} 
+                    <label for="inputUserame">F.I.O.</label>
+                  </div>
+    
+                  <div class="form-label-group">
+                    <input type="date"  class="form-control" placeholder="Email address" required  {{profile_form.age}}
+                    <label for="date"> Tug'ilgan kuningiz</label>
+                  </div>
+                  
+                  <hr>
+    
+                  <div class="form-label-group">
+                    <input type="text"  class="form-control" placeholder="specialite" required autofocus {{profile_form.specialite}} 
+                    <label for="inputUserame">Mutaxassisligingiz</label>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="text"  class="form-control" placeholder="language" required autofocus {{profile_form.language}} 
+                    <label for="inputUserame">Ona tilingiz</label>
+                  </div>
+    
+              
+                  
+                  <hr class="my-4">
+
+                  <div class="form-label-group">
+                    <input type="text"  class="form-control" placeholder="Username" required autofocus {{form.username}}
+                    <label for="">Login</label>
+                  </div>
+                  <div class="form-label-group">
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required {{form.email}}
+                    <label for="inputEmail">Email address</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password"  class="form-control" placeholder="Password" required {{form.password1}}
+                    <label for="inputPassword">Password</label>
+                  </div>
+                  
+                  <div class="form-label-group">
+                    <input type="password"  class="form-control" placeholder="Password" required {{form.password2}}
+                    <label for="inputConfirmPassword">Confirm password</label>
+                  </div> 
+
+                  <input class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Saqlash"></button>
+                </form>
+                
+            </div>
+          </div> -->
+        
+     {% endblock %}
+  </body>    
